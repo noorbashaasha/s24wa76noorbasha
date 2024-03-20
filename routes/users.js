@@ -1,9 +1,13 @@
 var express = require('express');
 var router = express.Router();
+let factor =1;
+let product =1;
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  factor++;
+  product*=factor;
+  res.send(`product is ${product}`);
 });
 
 module.exports = router;
